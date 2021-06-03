@@ -3,10 +3,10 @@ function randomNumber() {
     let number = Math.floor(Math.random() * (100 - 1) + 1);
     let whoNumber;
     let c;
-    let count = 10;
     // объявим все необходимые переменные
 
     function isRandomNumber() {
+        let count = 10;
         whoNumber = prompt('Введи число от 1 до 100. Число попыток: ' + count);
         function isNum() {
             if (Number(whoNumber) === number) {
