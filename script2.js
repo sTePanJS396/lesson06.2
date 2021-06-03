@@ -1,6 +1,6 @@
 
 function randomNumber() {
-    let number = 50;
+    let number = Math.floor(Math.random() * (100 - 1) + 1);
     let whoNumber;
     let c;
     let count = 10;
@@ -15,11 +15,11 @@ function randomNumber() {
                if (whoNumber === null) {
                    alert('Игра окончена!');
                    return c = false;
-               } else if (Number(whoNumber) < 50) {
+               } else if (Number(whoNumber) < number) {
                    alert('Загаданное число больше! Осталось попыток: ' + count);
                    count = count - 1;
                    console.log(count);
-               } else if (Number(whoNumber) > 50) {
+               } else if (Number(whoNumber) > number) {
                    alert('Загаданное число меньше! Осталось попыток: ' + count);
                    count = count - 1;
                    console.log(count);
@@ -39,6 +39,7 @@ function randomNumber() {
             let conf = confirm('Сыграть еще?');
             if(conf == true) {
                 isRandomNumber();
+                count = 10;
             } else {
                 c = false;
             }
